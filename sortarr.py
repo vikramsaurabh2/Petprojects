@@ -20,8 +20,8 @@ class sortarr:
   arr = [21,23,34,45,56,57,59,60,0]
 
   def __init__(self):
-    self.arr = [3,7,9,11,18,0]
-    self.element = 5
+    self.arr = [3,7,9,11,18,24]
+    self.element = 14
 
   def insert(self):
     print (self.arr[0])
@@ -58,6 +58,29 @@ class sortarr:
           k=k+1
           j=j+1
     return array
+    
+  def sort_sorted(self,array):
+        i=0 
+        j=-1
+        k=0
+        while i < len(array):
+            if self.element < array[i]:
+                j=i
+                break
+            i=i+1
+        if j ==0:
+            array = [self.element] + array[0:(len(array)-1)]
+            L = [array[j]]
+        elif j==-1:
+            array = array[1:(len(array))] + [self.element]
+        else:
+            k=j+1
+            while k < len(array):
+             array[len(array)-1-(k-j-1)]=array[len(array)-2-(k-j-1)]
+             k=k+1
+            array[j]=self.element
+        
+        return array
      
   def showarr(self, array):
    print ("---")
