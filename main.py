@@ -14,7 +14,8 @@ def main():
  #global_arr.showarr(global_arr.arr)
  #final_array=global_arr.sort(global_arr.arr)
  #final_array=global_arr.sort_sorted(global_arr.arr)
- final_array=global_arr.bubble_sort(global_arr.arr)
+ #final_array=global_arr.bubble_sort(global_arr.arr)
+ final_array=global_arr.reverse(global_arr.arr)
  global_arr.showarr(final_array)
 
 if __name__=='__main__':
