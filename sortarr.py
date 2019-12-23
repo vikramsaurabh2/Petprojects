@@ -98,6 +98,18 @@ class sortarr:
             j=j+1
         i=i+1
       return array
+
+  def reverse(self,array):
+      i=0
+      while i < len(array):
+        j=0
+        tmp=array[j]
+        while j < len(array)-i-1:
+            array[j]=array[j+1]
+            j=j+1
+        array[len(array)-i-1]=tmp
+        i=i+1
+      return array
      
   def showarr(self, array):
    print ("---")
