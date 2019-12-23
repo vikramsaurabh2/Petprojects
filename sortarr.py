@@ -21,7 +21,7 @@ class sortarr:
 
   def __init__(self):
     self.arr = [3,7,9,11,18,24]
-    self.element = 14
+    self.element = 2
 
   def insert(self):
     print (self.arr[0])
@@ -81,6 +81,23 @@ class sortarr:
             array[j]=self.element
         
         return array
+        
+  def bubble_sort(self,array):
+      i=0
+      while i < len(array):
+        j=0
+        print (i)
+        print ("-----")
+        while j < len(array)-1-i:
+            if array[j] > array[j+1]:
+               array[j] = array[j+1]+array[j]
+               array[j+1] = array[j]-array[j+1]
+               array[j] = array[j]-array[j+1]
+            print (j) 
+            print ("====")
+            j=j+1
+        i=i+1
+      return array
      
   def showarr(self, array):
    print ("---")
